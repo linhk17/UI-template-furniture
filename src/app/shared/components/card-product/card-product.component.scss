@@ -1,0 +1,25 @@
+.card-product {
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid var(--orange-500);
+        transition: .5s ease-in-out;
+        transform: scale(1.02);
+    }
+}
+
+.btn-cart {
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.img-product {
+    border-radius: 8px;
+    padding: 10px 10px 0 10px;
+
+}

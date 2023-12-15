@@ -1,0 +1,28 @@
+.icon-img {
+    width: 22px;
+    height: 22px;
+}
+
+p {
+    font-size: 13.2px;
+    margin-bottom: 0;
+    height: 22px;
+}
+
+.nav-top,
+.nav-bottom {
+    // max-width: 1356px;
+
+    .nav-item {
+        height: 22px;
+    }
+}
+.dropdown-menu{
+    transition: 1s all;
+    border: 0;
+    box-shadow: 2px 3px 10px #999999;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}

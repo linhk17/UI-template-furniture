@@ -1,0 +1,330 @@
+<div class="container-xl py-5 px-md-4 my-lg-4">
+    <section class="section-hero">
+        <div class="position-relative">
+            <div class="row row-cols-md-2 row-cols-1 mb-xxl-5 mb-lg-3 mb-md-3">
+                <div class="col px-lg-5">
+                    <h1 class="fw-bold text-head me-4">Perfect Harmony: Comfort & Style</h1>
+                    <p class="fs-5 text-secondary my-4">
+                        Explore furniture that harmoniously combines comfort and style to elevate your home
+                    </p>
+                    <div
+                        class=" d-lg-flex d-md-block d-flex justify-content-lg-start justify-content-center mb-4 align-items-center">
+                        <button type="button" class="btn btn-outline-orange pd-16 rounded-pill me-md-0 me-3">Explore Our
+                            Offers</button>
+                        <div
+                            class="d-flex justify-content-md-start justify-content-lg-center align-items-center ms-lg-4 ms-md-2 mt-lg-0 mt-md-3">
+                            <button type="button" class="btn icon-play me-3">
+                                <img src="assets/icon/play.jpg" /></button>
+                            <div class="text-secondary">
+                                Watch Video
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <img class="w-100 img-banner hover-img" src="assets/banner/banner-first-section.jpg" />
+                </div>
+            </div>
+            <div class="row card-attribute rounded-pill py-4 ps-md-3 pe-md-4 m-md-0 m-2 d-flex justify-content-center">
+                <div class="col-lg-2 col-md-3 col-6 ps-md-4 ps-2">
+                    <p class="text-gray-500 fw-bold">Confort</p>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img class="icon-card-section me-2" src="assets/icon/seating.png" />
+                        <div class="text-gray-200 fw-semibold fs-14">
+                            Cozy Seating
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 ps-lg-5 ps-md-0">
+                    <p class="text-gray-500 fw-bold">Quality Assurance</p>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img class="icon-card-section me-2" src="assets/icon/like.png" />
+                        <div class="text-gray-200 fw-semibold fs-14">
+                            Cozy Seating
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-6 ps-md-0 ps-lg-3 ps-2 mt-md-0 mt-4">
+                    <p class="text-gray-500 fw-bold">Free Shipping</p>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img class="icon-card-section me-2" src="assets/icon/cost.png" />
+                        <div class="text-gray-200 fw-semibold fs-14">
+                            No-Cost Delivery
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-6 ps-md-0 ps-2 mt-md-0 mt-4">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <div>
+                            <p class="text-gray-500 fw-bold">Secure Checkout</p>
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img class="icon-card-section me-2" src="assets/icon/secure.png" />
+                                <div class="text-gray-200 fw-semibold fs-14">
+                                    Secure Payments
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button"
+                            class=" ms-lg-4 d-none d-lg-flex btn btn-outline-orange rounded-pill py-10 px-4">
+                            See More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="d-md-flex d-block flex-wrap justify-content-center align-items-center ms-auto me-auto banner-brand">
+        <p class="text-brand px-4">
+            Lowe’s
+        </p>
+        <p class=" text-brand px-4">
+            DeWalt
+        </p>
+        <p class=" text-brand px-4">
+            Home Depot
+        </p>
+        <p class=" text-brand px-4">
+            IKEA
+        </p>
+        <p class=" text-brand px-4">
+            Makita
+        </p>
+        <p class=" text-brand px-4">
+            3M
+        </p>
+    </div>
+    <section class=" category-section list-card-item row row-cols-lg-3 row-cols-md-1 gy-xl-0 gy-2 gx-xl-4 gx-lg-2 mt-5">
+        <div class="col">
+            <ng-container [ngTemplateOutlet]="cardItem"
+                [ngTemplateOutletContext]="{ img: 'assets/furniture/table.png', title: 'Dining Tables' }">
+            </ng-container>
+        </div>
+        <div class="col">
+            <ng-container [ngTemplateOutlet]="cardItem"
+                [ngTemplateOutletContext]="{ img: 'assets/furniture/chair.png', title: 'Chairs' }">
+            </ng-container>
+        </div>
+        <div class="col">
+            <ng-container [ngTemplateOutlet]="cardItem"
+                [ngTemplateOutletContext]="{ img: 'assets/furniture/desk.png', title: 'Office Desks' }">
+            </ng-container>
+        </div>
+    </section>
+    <section class="product-section mt-5">
+        <div class="row">
+            <div
+                class="col-lg-4 col-12 d-lg-block d-sm-flex d-block justify-content-between text-lg-start text-center align-items-center">
+                <button type="button" class="btn btn-light text-danger fw-bold rounded-pill">Check Our Product</button>
+                <h2 class="mt-lg-3 mt-sm-0 mt-3 fs-5 fw-bold ">Crafted with excellent material</h2>
+            </div>
+            <div
+                class="col-lg-8 mt-lg-0 mt-4 col-12 flex-wrap h-100 d-flex justify-content-lg-end justify-content-center justify-content-center">
+                <div class="btn type-product px-4 type-product-active">
+                    Best Seller
+                </div>
+                <div class="type-product px-4">
+                    Chair
+                </div>
+                <div class="type-product px-4">
+                    Table
+                </div>
+                <div class="type-product px-4">
+                    Bed
+                </div>
+                <div class="type-product px-4">
+                    Closet
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-1 gy-4 text-align-center mt-4">
+            <div *ngFor="let item of products" class="col">
+                <app-card-product [img]="item.img" [nameProduct]="item.nameProduct" [price]="item.price"
+                    [priceOld]="item.priceOld"></app-card-product>
+            </div>
+        </div>
+    </section>
+    <section class="space-section mt-5 pt-5">
+        <div class="position-relative">
+            <div class="row">
+                <div class="col-xl-7 col-lg-6 px-lg-5 col-12 text-lg-start text-center">
+                    <h1 class="fw-bold me-md-5 me-0 lh-base">Elevate Your Space with Uncompromising Quality</h1>
+                    <p class="fs-6 text-secondary my-4">
+                        Experience the epitome of furniture quality. Our products are meticulously crafted with an
+                        unwavering commitment to excellence. From the finest materials to expert craftsmanship, each
+                        piece
+                        embodies durability, comfort, and timeless style. Elevate your space with the assurance of
+                        exceptional quality and lasting beauty
+                    </p>
+                    <div class="list-subtract d-grid gap-2">
+                        <div class="d-flex align-items-center">
+                            <img class="icon-circle" src="assets/icon/subtract.png" />
+                            <p class="mb-0 ms-4 fw-semibold">Experience Unparalleled Quality</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img class="icon-circle" src="assets/icon/subtract.png" />
+                            <p class="mb-0 ms-4 fw-semibold">Built to Last for Generations</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img class="icon-circle" src="assets/icon/subtract.png" />
+                            <p class="mb-0 ms-4 fw-semibold">Loved by Customers Worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-6 me-auto col-12 mt-lg-0 mt-4">
+                    <img class="w-100 h-100 hover-img" src="assets/banner/banner-space.png" />
+                </div>
+            </div>
+            <ng-container [ngTemplateOutlet]="cardAvatar"
+                [ngTemplateOutletContext]="{position: 'card-left'}"></ng-container>
+            <ng-container [ngTemplateOutlet]="message"
+                [ngTemplateOutletContext]="{position: 'card-mess-right'}"></ng-container>
+            <img style="width: 40px; height: 40px; left: 55%" class="position-absolute top-50"
+                src="assets/icon/active.png" />
+        </div>
+    </section>
+
+    <section
+        class=" category-section list-card-item row row-cols-lg-3 row-cols-md-1 gy-xl-0 gy-2 gx-xl-4 gx-lg-2 mt-5 pt-5">
+        <div class="col">
+            <ng-container [ngTemplateOutlet]="cardItem"
+                [ngTemplateOutletContext]="{ img: 'assets/furniture/sofa.png', title: 'Sofa' }">
+            </ng-container>
+        </div>
+        <div class="col">
+            <ng-container [ngTemplateOutlet]="cardItem"
+                [ngTemplateOutletContext]="{ img: 'assets/furniture/nightstand.png', title: 'nightstand' }">
+            </ng-container>
+        </div>
+        <div class="col">
+            <ng-container [ngTemplateOutlet]="cardItem"
+                [ngTemplateOutletContext]="{ img: 'assets/furniture/bedroom.png', title: 'Bedroom' }">
+            </ng-container>
+        </div>
+    </section>
+
+    <section class="space-section py-5 mt-5 pt-5">
+        <div class="position-relative">
+            <div class="row">
+                <div class="col-xl-7 col-lg-6  col-12 ">
+                    <img class="ps-5 ms-5 w-75 h-100 hover-img" src="assets/banner/banner-mood.png" />
+                </div>
+                <div class="col-xl-5 col-lg-6 px-lg-5 col-12 mt-lg-0 mt-4 text-lg-start text-center">
+                    <h1 class="fw-bold me-md-5 me-0 lh-base">Elevate Your Mood with Comfortable Furniture</h1>
+                    <p class="fs-6 text-secondary my-4">
+                        Your surroundings have a profound impact on your mood. Discover how our high-quality furniture
+                        can transform your space into a haven of comfort and happiness. Create an environment that
+                        nurtures your well-being and elevates your spirits with the perfect blend of style and coziness.
+                    </p>
+                    <div class="list-subtract d-grid gap-2">
+                        <div class="d-flex align-items-center">
+                            <img class="icon-circle" src="assets/icon/subtract.png" />
+                            <p class="mb-0 ms-4 fw-semibold">Unmatched Comfort</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img class="icon-circle" src="assets/icon/subtract.png" />
+                            <p class="mb-0 ms-4 fw-semibold">Crafted for Quality</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img class="icon-circle" src="assets/icon/subtract.png" />
+                            <p class="mb-0 ms-4 fw-semibold">Stylish Elegance</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-dark rounded-pill px-4 py-2 mt-4">Shop now</button>
+                </div>
+            </div>
+            <ng-container [ngTemplateOutlet]="cardAvatar"
+                [ngTemplateOutletContext]="{position: 'card-right'}"></ng-container>
+            <ng-container [ngTemplateOutlet]="message"
+                [ngTemplateOutletContext]="{position: 'card-mess-left'}"></ng-container>
+            <img style="width: 40px; height: 40px; left: 0" class="position-absolute top-50"
+                src="assets/icon/active.png" />
+        </div>
+    </section>
+    <section style="background-color: #000;" class="rating-section text-white mt-5 py-5 px-5">
+        <div class="row px-md-5 px-0">
+            <div class="col-lg-7 col-md-12">
+                <h2 class="w-50 lh-base fw-semibold">Our Dedication to Your Satisfaction</h2>
+                <p class="fs-6 my-4">
+                    We take pride in our unwavering commitment to quality and customer satisfaction. With a track
+                    record of excellence, we provide you with the finest furniture and a service you can trust.
+                </p>
+                <ng-container [ngTemplateOutlet]="rating"></ng-container>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <ng-container [ngTemplateOutlet]="contentIcon" [ngTemplateOutletContext]="
+                    {title: 'Quality Craftsmanship', 
+                    content: 'Our furniture is meticulously handcrafted to stand the test of time, ensuring it can be enjoyed for generations to come.',
+                    icon: 'assets/icon/quality.png'}"></ng-container>
+
+                <ng-container [ngTemplateOutlet]="contentIcon" [ngTemplateOutletContext]="
+                    {title: 'Quality Craftsmanship', 
+                    content: 'Discover a wide variety of styles and options to suit your unique preferences and needs.',
+                    icon: 'assets/icon/extensive.png'}"></ng-container>
+
+                <ng-container [ngTemplateOutlet]="contentIcon" [ngTemplateOutletContext]="
+                    {title: 'Dedicated Customer Support', 
+                    content: 'Quiuckly navigate you anda engage with your adience',
+                    icon: 'assets/icon/dedicate.png'}"></ng-container>
+            </div>  
+        </div>
+
+    </section>
+</div>
+
+<ng-template #cardItem let-title="title" let-img="img">
+    <div class="card-item d-flex justify-content-between px-2">
+        <div class="d-block m-auto">
+            <p class="title-card">{{title}}</p>
+            <button class="btn rounded-pill py-2 px-3 btn-card">See more</button>
+        </div>
+        <img [src]="img" />
+    </div>
+</ng-template>
+
+<ng-template #message let-content="content" let-position="position">
+    <div [class]="position"
+        class="card-message shadow-sm py-3 px-3 d-flex gap-3 justify-content-center align-items-center">
+        <img class="img-icon" src="assets/icon/check.png" />
+        <div class="fw-bold">
+            We guarantee your comfort
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #cardAvatar let-img="img" let-position="position">
+    <div [class]="position"
+        class="card-avatar shadow-sm py-3 px-3 d-flex gap-3 justify-content-center align-items-center">
+        <img class="img-avt" src="assets/icon/avatar.png" />
+        <div class="d-grid gap-2">
+            <div class="fw-bold">
+                Mark Anderson
+            </div>
+            <div class="text-secondary">
+                Furniture Craftsmanship
+            </div>
+        </div>
+        <img class="img-icon" src="assets/icon/chat.png" />
+    </div>
+</ng-template>
+
+<ng-template #rating>
+    <div id="rating1" class="star-rating" role="rating" data-rating="3">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+    </div>
+</ng-template>
+
+<ng-template #contentIcon let-title="title" let-content="content" let-icon="icon">
+    <div class="d-flex gap-4 mt-3">
+        <img class="h-75" style="width: 30px;" [src]="icon" />
+        <div class="d-grid gap-2">
+            <h5 class="fw-bold">{{title}}</h5>
+            <p class="fs-6 ">
+                {{content}}
+            </p>
+        </div>
+    </div>
+</ng-template>
