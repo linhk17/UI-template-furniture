@@ -223,8 +223,8 @@
                     record of excellence, we provide you with the finest furniture and a service you can trust.
                 </p>
                 <div class="d-flex gap-5">
-                    <ng-container [ngTemplateOutlet]="rating"></ng-container>
-                    <ng-container [ngTemplateOutlet]="rating"></ng-container>
+                    <ng-container [ngTemplateOutlet]="rating" [ngTemplateOutletContext]="{title: 'Quality', point: '4.9'}"></ng-container>
+                    <ng-container [ngTemplateOutlet]="rating" [ngTemplateOutletContext]="{title: 'Customer Satisfaction', point: '4.8'}"></ng-container>
 
                 </div>
             </div>
@@ -290,7 +290,7 @@
 </ng-template>
 
 
-<ng-template #rating>
+<ng-template #rating let-title="title" let-point="point">
     <div class="content me-3">
         <div id="rating1" class="star-rating" role="rating" data-rating="3">
             <span class="star" data-value="1">&#9733;</span>
@@ -300,8 +300,8 @@
             <span class="star" data-value="5">&#9733;</span>
         </div>
         <div class="rating-point" style="line-height: 2.5; letter-spacing: 1px;">
-           <b>4.9</b> / 5 rating
-           <p class="fw-bold">Qualitity</p>
+           <b>{{point}}</b> / 5 rating
+           <p class="fw-bold">{{title}}</p>
         </div>
     </div>
    
