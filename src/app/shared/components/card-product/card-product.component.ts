@@ -9,5 +9,5 @@ export class CardProductComponent {
   @Input() nameProduct: string = '';
   @Input() priceOld: number = 0;
   @Input() price: number = 0;
-  @Input() img: string = '';
+  @Input() img: string[] = [];
 }

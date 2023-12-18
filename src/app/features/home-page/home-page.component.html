@@ -1,5 +1,5 @@
-<div class="container-xl py-5 px-md-4 my-lg-4">
-    <section class="section-hero">
+<div class="container-xl py-5 px-md-4 my-lg-4 home-page">
+    <section class="section-hero section-scroll">
         <div class="position-relative">
             <div class="row row-cols-md-2 row-cols-1 mb-xxl-5 mb-lg-3 mb-md-3">
                 <div class="col px-lg-5">
@@ -72,8 +72,7 @@
                 </div>
             </div>
         </div>
-    </section>
-    <div class="d-md-flex d-block flex-wrap justify-content-center align-items-center ms-auto me-auto banner-brand">
+        <div class="d-md-flex d-block flex-wrap justify-content-center align-items-center ms-auto me-auto banner-brand">
         <p class="text-brand px-4">
             Lowe’s
         </p>
@@ -93,24 +92,25 @@
             3M
         </p>
     </div>
-    <section class=" category-section list-card-item row row-cols-lg-3 row-cols-md-1 gy-xl-0 gy-2 gx-xl-4 gx-lg-2 mt-5">
-        <div class="col">
-            <ng-container [ngTemplateOutlet]="cardItem"
-                [ngTemplateOutletContext]="{ img: 'assets/furniture/table.png', title: 'Dining Tables' }">
-            </ng-container>
-        </div>
-        <div class="col">
-            <ng-container [ngTemplateOutlet]="cardItem"
-                [ngTemplateOutletContext]="{ img: 'assets/furniture/chair.png', title: 'Chairs' }">
-            </ng-container>
-        </div>
-        <div class="col">
-            <ng-container [ngTemplateOutlet]="cardItem"
-                [ngTemplateOutletContext]="{ img: 'assets/furniture/desk.png', title: 'Office Desks' }">
-            </ng-container>
-        </div>
     </section>
-    <section class="product-section mt-5">
+    <section class="product-section section-scroll mb-3 mt-5 pt-5">
+        <section class="category-section list-card-item row row-cols-lg-3 mb-5 pb-5 row-cols-md-1 gy-xl-0 gy-2 gx-xl-4 gx-lg-2 mt-0">
+            <div class="col">
+                <ng-container [ngTemplateOutlet]="cardItem"
+                    [ngTemplateOutletContext]="{ img: 'assets/furniture/table.png', title: 'Dining Tables' }">
+                </ng-container>
+            </div>
+            <div class="col">
+                <ng-container [ngTemplateOutlet]="cardItem"
+                    [ngTemplateOutletContext]="{ img: 'assets/furniture/chair.png', title: 'Chairs' }">
+                </ng-container>
+            </div>
+            <div class="col">
+                <ng-container [ngTemplateOutlet]="cardItem"
+                    [ngTemplateOutletContext]="{ img: 'assets/furniture/desk.png', title: 'Office Desks' }">
+                </ng-container>
+            </div>
+        </section>
         <div class="row">
             <div
                 class="col-lg-4 col-12 d-lg-block d-sm-flex d-block justify-content-between text-lg-start text-center align-items-center">
@@ -119,20 +119,8 @@
             </div>
             <div
                 class="col-lg-8 mt-lg-0 mt-4 col-12 flex-wrap h-100 d-flex justify-content-lg-end justify-content-center justify-content-center">
-                <div class="btn type-product px-4 type-product-active">
-                    Best Seller
-                </div>
-                <div class="type-product px-4">
-                    Chair
-                </div>
-                <div class="type-product px-4">
-                    Table
-                </div>
-                <div class="type-product px-4">
-                    Bed
-                </div>
-                <div class="type-product px-4">
-                    Closet
+                <div *ngFor="let item of typeProducts; index as i" (click)="active=i" class="btn rounded-pill type-product px-4" [class.type-product-active]="active == i">
+                    {{item.title}}
                 </div>
             </div>
         </div>
@@ -143,10 +131,10 @@
             </div>
         </div>
     </section>
-    <section class="space-section mt-5 pt-5">
+    <section class="space-section section-scroll mt-0 pt-5">
         <div class="position-relative">
-            <div class="row">
-                <div class="col-xl-7 col-lg-6 px-lg-5 col-12 text-lg-start text-center">
+            <div class="row pt-3">
+                <div class="col-xl-6 px-lg-5 col-12 text-lg-start text-center">
                     <h1 class="fw-bold me-md-5 me-0 lh-base">Elevate Your Space with Uncompromising Quality</h1>
                     <p class="fs-6 text-secondary my-4">
                         Experience the epitome of furniture quality. Our products are meticulously crafted with an
@@ -170,45 +158,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-6 me-auto col-12 mt-lg-0 mt-4">
+                <div class="col-xl-6 me-auto col-12 mt-lg-0 mt-4">
                     <img class="w-100 h-100 hover-img" src="assets/banner/banner-space.png" />
                 </div>
             </div>
-            <ng-container [ngTemplateOutlet]="cardAvatar"
-                [ngTemplateOutletContext]="{position: 'card-left'}"></ng-container>
-            <ng-container [ngTemplateOutlet]="message"
-                [ngTemplateOutletContext]="{position: 'card-mess-right'}"></ng-container>
-            <img style="width: 40px; height: 40px; left: 55%" class="position-absolute top-50"
-                src="assets/icon/active.png" />
         </div>
     </section>
-
-    <section
-        class=" category-section list-card-item row row-cols-lg-3 row-cols-md-1 gy-xl-0 gy-2 gx-xl-4 gx-lg-2 mt-5 pt-5">
-        <div class="col">
-            <ng-container [ngTemplateOutlet]="cardItem"
-                [ngTemplateOutletContext]="{ img: 'assets/furniture/sofa.png', title: 'Sofa' }">
-            </ng-container>
-        </div>
-        <div class="col">
-            <ng-container [ngTemplateOutlet]="cardItem"
-                [ngTemplateOutletContext]="{ img: 'assets/furniture/nightstand.png', title: 'nightstand' }">
-            </ng-container>
-        </div>
-        <div class="col">
-            <ng-container [ngTemplateOutlet]="cardItem"
-                [ngTemplateOutletContext]="{ img: 'assets/furniture/bedroom.png', title: 'Bedroom' }">
-            </ng-container>
-        </div>
-    </section>
-
-    <section class="space-section py-5 mt-5 pt-5">
-        <div class="position-relative">
+   
+    <section class="space-section section-scroll py-5 my-5">
+        <section class="category-section list-card-item row row-cols-lg-3 row-cols-md-1 gy-xl-0 gy-2 gx-xl-4 gx-lg-2 pt-2 pb-5 mb-5">
+            <div class="col">
+                <ng-container [ngTemplateOutlet]="cardItem"
+                    [ngTemplateOutletContext]="{ img: 'assets/furniture/sofa.png', title: 'Sofa' }">
+                </ng-container>
+            </div>
+            <div class="col">
+                <ng-container [ngTemplateOutlet]="cardItem"
+                    [ngTemplateOutletContext]="{ img: 'assets/furniture/nightstand.png', title: 'nightstand' }">
+                </ng-container>
+            </div>
+            <div class="col">
+                <ng-container [ngTemplateOutlet]="cardItem"
+                    [ngTemplateOutletContext]="{ img: 'assets/furniture/bedroom.png', title: 'Bedroom' }">
+                </ng-container>
+            </div>
+        </section>
+        <div class="position-relative pt-4">
             <div class="row">
-                <div class="col-xl-7 col-lg-6  col-12 ">
-                    <img class="ps-5 ms-5 w-75 h-100 hover-img" src="assets/banner/banner-mood.png" />
+                <div class="col-xl-6 col-12 ">
+                    <img class=" w-100 h-100 hover-img" src="assets/banner/banner-mood.png" />
                 </div>
-                <div class="col-xl-5 col-lg-6 px-lg-5 col-12 mt-lg-0 mt-4 text-lg-start text-center">
+                <div class="col-xl-6 col-12 mt-lg-0 mt-4 text-lg-start text-center">
                     <h1 class="fw-bold me-md-5 me-0 lh-base">Elevate Your Mood with Comfortable Furniture</h1>
                     <p class="fs-6 text-secondary my-4">
                         Your surroundings have a profound impact on your mood. Discover how our high-quality furniture
@@ -232,15 +212,9 @@
                     <button type="button" class="btn btn-dark rounded-pill px-4 py-2 mt-4">Shop now</button>
                 </div>
             </div>
-            <ng-container [ngTemplateOutlet]="cardAvatar"
-                [ngTemplateOutletContext]="{position: 'card-right'}"></ng-container>
-            <ng-container [ngTemplateOutlet]="message"
-                [ngTemplateOutletContext]="{position: 'card-mess-left'}"></ng-container>
-            <img style="width: 40px; height: 40px; left: 0" class="position-absolute top-50"
-                src="assets/icon/active.png" />
         </div>
     </section>
-    <section style="background-color: #000;" class="rating-section text-white mt-5 py-5 px-5">
+    <section style="background-color: #000;" class="section-scroll rating-section text-white py-5 px-5 mt-5">
         <div class="row px-md-5 px-0">
             <div class="col-lg-7 col-md-12">
                 <h2 class="w-50 lh-base fw-semibold">Our Dedication to Your Satisfaction</h2>
@@ -265,7 +239,37 @@
                     {title: 'Dedicated Customer Support', 
                     content: 'Quiuckly navigate you anda engage with your adience',
                     icon: 'assets/icon/dedicate.png'}"></ng-container>
-            </div>  
+            </div>
+        </div>
+    </section>
+    <section class="section-scroll gallery-section mt-5">
+        <div class="text-center">
+            <button type="button" class="btn btn-light text-danger fw-bold rounded-pill">Check Our Product</button>
+            <p class="mt-lg-3 mt-sm-0 mt-3 fs-3 fw-bold ">Our Furniture Gallery</p>
+            <div class="text-secondary">
+                Explore Our Gallery of Inspiring Designs
+            </div>
+        </div>
+        <div class="row g-4 px-md-5 px-2 ms-auto me-auto mt-4">
+            <div class="col-md-3">
+                <img class="w-100 hover-img h-100" src="assets/banner/banner_1.png" />
+            </div>
+            <div class="col-md-3">
+                <img class="w-100 hover-img h-100" src="assets/banner/banner_2.png" />
+            </div>
+            <div class="col-md-6 ">
+                <img class="w-100 hover-img" src="assets/banner/banner_3.png" />
+            </div>
+            <div class="col-md-6">
+                <img class="w-100 hover-img" src="assets/banner/banner_4.png" />
+            </div>
+            <div class="col-md-3">
+                <img class="w-100 hover-img h-100" src="assets/banner/banner_5.png" />
+            </div>
+            <div class="col-md-3">
+                <img class="w-100 hover-img h-100" src="assets/banner/banner_6.png" />
+            </div>
+
         </div>
 
     </section>
@@ -281,31 +285,6 @@
     </div>
 </ng-template>
 
-<ng-template #message let-content="content" let-position="position">
-    <div [class]="position"
-        class="card-message shadow-sm py-3 px-3 d-flex gap-3 justify-content-center align-items-center">
-        <img class="img-icon" src="assets/icon/check.png" />
-        <div class="fw-bold">
-            We guarantee your comfort
-        </div>
-    </div>
-</ng-template>
-
-<ng-template #cardAvatar let-img="img" let-position="position">
-    <div [class]="position"
-        class="card-avatar shadow-sm py-3 px-3 d-flex gap-3 justify-content-center align-items-center">
-        <img class="img-avt" src="assets/icon/avatar.png" />
-        <div class="d-grid gap-2">
-            <div class="fw-bold">
-                Mark Anderson
-            </div>
-            <div class="text-secondary">
-                Furniture Craftsmanship
-            </div>
-        </div>
-        <img class="img-icon" src="assets/icon/chat.png" />
-    </div>
-</ng-template>
 
 <ng-template #rating>
     <div id="rating1" class="star-rating" role="rating" data-rating="3">

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { products } from 'src/app/shared/utils/data';
+import { products, typeProduct } from 'src/app/shared/utils/data';
 
 @Component({
   selector: 'app-home-page',
@@ -7,5 +7,9 @@ import { products } from 'src/app/shared/utils/data';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-  products = products
+  products = products;
+  typeProducts = typeProduct;
+  active: number = 0
+  ngOnInit(){
+  }
 }

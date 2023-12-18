@@ -1,6 +1,6 @@
 <div class="card card-product w-100">
     <div class="img-product bg-light">
-        <img [src]="'assets/product/'+img" class="card-img-top" alt="...">
+        <img *ngFor="let item of img; index as i" [src]="'assets/product/'+item" [class.hover-img]="i != 0" class="card-img-top" alt="...">
     </div>
     <div class="card-body">
         <h6 class="card-title fw-bold">{{nameProduct}}</h6>

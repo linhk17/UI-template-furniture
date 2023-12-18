@@ -18,8 +18,84 @@
     }
 }
 
+// .img-product {
+//     border-radius: 8px;
+//     padding: 10px 10px 0 10px;
+//     overflow: hidden;
+//     width: 100%;
+//     min-height: 100%;
+
+//     img {
+//         transition: all linear .7s;
+//     }
+
+//     .hide {
+//         display: none;
+//     }
+// }
 .img-product {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
     padding: 10px 10px 0 10px;
+    .hover-img {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        opacity: 0;
+        width: 90%;
+    }
 
+    img {
+        width: 100%;
+        transition: all linear .7s;
+
+    }
+
+    &:hover img {
+        opacity: 0;
+    }
+
+    &:hover .hover-img {
+        opacity: 1;
+    }
 }
+
+@keyframes FadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: .75;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: .75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
