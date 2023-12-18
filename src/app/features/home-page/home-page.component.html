@@ -222,7 +222,11 @@
                     We take pride in our unwavering commitment to quality and customer satisfaction. With a track
                     record of excellence, we provide you with the finest furniture and a service you can trust.
                 </p>
-                <ng-container [ngTemplateOutlet]="rating"></ng-container>
+                <div class="d-flex gap-5">
+                    <ng-container [ngTemplateOutlet]="rating"></ng-container>
+                    <ng-container [ngTemplateOutlet]="rating"></ng-container>
+
+                </div>
             </div>
             <div class="col-lg-5 col-md-12">
                 <ng-container [ngTemplateOutlet]="contentIcon" [ngTemplateOutletContext]="
@@ -287,13 +291,20 @@
 
 
 <ng-template #rating>
-    <div id="rating1" class="star-rating" role="rating" data-rating="3">
-        <span class="star" data-value="1">&#9733;</span>
-        <span class="star" data-value="2">&#9733;</span>
-        <span class="star" data-value="3">&#9733;</span>
-        <span class="star" data-value="4">&#9733;</span>
-        <span class="star" data-value="5">&#9733;</span>
+    <div class="content me-3">
+        <div id="rating1" class="star-rating" role="rating" data-rating="3">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="rating-point" style="line-height: 2.5; letter-spacing: 1px;">
+           <b>4.9</b> / 5 rating
+           <p class="fw-bold">Qualitity</p>
+        </div>
     </div>
+   
 </ng-template>
 
 <ng-template #contentIcon let-title="title" let-content="content" let-icon="icon">
